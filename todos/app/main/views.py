@@ -35,7 +35,7 @@ def login():
         if user_password == message['password']:
             ps['message'] = 'Login success!'
             ps['done'] = True
-            session['log_up'] = True
+            session['log_in'] = True
             session['username'] = message['username']
             session['password'] = message['password']
         else:
@@ -71,6 +71,7 @@ def logup():
 def logout():
     if not request.json:
         abort(400)
+    session.pop('log_in',None)
     result = {
         'done': False
     }

@@ -4,13 +4,13 @@
 <table>
 	<tr>
 		<td>API(路由)</td>
-		<td>接受</td>
+		<td>接收</td>
 		<td>返回</td>
 	</tr>
 	<tr>
 		<td>"/"(首页)</td>
 		<td></td>
-		<td>show_entries.html</td>
+		<td>show.html</td>
 	<tr>
 		<td>"/todos/api/logup/todos"（注册）</td>
 		<td>{"username": username,"password":password}</td>

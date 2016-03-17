@@ -4,7 +4,7 @@ class Config:
     SECRET_KEY = os.environ.get('SECRET_KEY') or 'hard to guess string'
     SQLALCHEMY_COMMIT_ON_TEARDOWN = True
     @staticmethod
-    def _init_app(app):
+    def init_app(app):
         pass
 
 class DevelopmentConfig(Config):

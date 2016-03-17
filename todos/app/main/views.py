@@ -2,18 +2,14 @@ from datetime import datetime
 import json
 from flask import render_template, redirect, url_for, abort, flash, request, current_app, make_response, jsonify, session
 from flask.ext.sqlalchemy import get_debug_queries
-from flask.ext.httpauth import HTTPBasicAuth
 from . import main
-#from .from import TodoForm
 from .. import db
 from ..models import Todo
-#from app.exceptions import CalidationError
 
-auth = HTTPBasicAuth()
 
 @main.route('/', methods=['GET'])
 def index():
-    return render_template('show_entries.html')
+    return render_template('index.html')
 
 
 @main.route('/todos/api/login/todos', methods=['GET','POST'])
@@ -49,10 +45,8 @@ def login():
 
 @main.route('/todos/api/logup/todos', methods=['GET','POST'])
 def logup():
-    #print type(request.json)
     if not request.json:
         abort(400)
-    #import pdb;pdb.set_trace()
     inform = {
         'username': request.json['username'],
         'password': request.json['password'],

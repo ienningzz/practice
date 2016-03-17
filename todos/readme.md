@@ -39,6 +39,6 @@
 		<td>{'delete':results} {results = {'done':bool}}</td>
 	<tr>
 		<td>"todos/api/logout/todos" (登出)</td>
-		<td>{'done':bool}</td></td>
+		<td>{'done':True}</td></td>
 		<td>{'logout':result} {result = {'done':bool}}</td>
 		</tr>

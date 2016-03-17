@@ -42,3 +42,20 @@
 		<td>{'done':True}</td></td>
 		<td>{'logout':result} {result = {'done':bool}}</td>
 		</tr>
+## method of application usage
+Install
+========
+```
+$ python manage.py createall
+```
+
+Running
+========
+```bash
+$ python manage.py runserver
+```
+Remove
+========
+```bash
+$ python manage.py dropall
+```
